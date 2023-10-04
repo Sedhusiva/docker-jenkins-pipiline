@@ -37,7 +37,7 @@ pipeline {
 
         {
 
-                emailext body: "*${currentBuild.currentResult}:* Job Name:
+                emailext body: "*${currentBuild.currentResult}:* Job Name:pipelinedemoproject
 
                 ${env.JOB_NAME} || Build Number: ${env.BUILD_NUMBER}\n More
 
