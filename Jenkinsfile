@@ -28,8 +28,6 @@ pipeline {
       sh 'docker rm -f mypycont'
       sh 'docker run --name mypycont -d -p 3000:5000 my-flask'
     }
-  }
-   post {
         success {
             emailext subject: 'Build Success',
                       body: 'The build was successful. Output:\n' + readFile('script.sh'),
