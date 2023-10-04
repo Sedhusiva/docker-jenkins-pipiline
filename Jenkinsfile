@@ -28,16 +28,5 @@ pipeline {
       sh 'docker rm -f mypycont'
       sh 'docker run --name mypycont -d -p 3000:5000 my-flask'
     }
-        success {
-            emailext subject: 'Build Success',
-                      body: 'The build was successful. Output:\n' + readFile('script.sh'),
-                      to: 'sivasanthi.svs@gmail.com'
-        }
-
-        failure {
-            emailext subject: 'Build Failure',
-                      body: 'The build failed. Please check the Jenkins logs for details.',
-                      to: 'sivasanthi.svs@gmail.com'
-        }
-    }
+}
 }
