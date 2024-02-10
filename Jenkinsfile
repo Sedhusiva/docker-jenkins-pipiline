@@ -29,7 +29,7 @@ pipeline {
       sh 'docker run --name mypycont -d -p 3000:5000 my-flask'
       mail to: "sivasanthi.svs@gmail.com",
       subject: "Notification Mail From Jenkins",
-      body: "The simplescriptpt Pipeline project Task 7, Automatic Notification will be sent through email While any change made in commit by adding the webhook in the created and configured repository."
+      body: "Task: Setting up Jenkins for Continuous Integration/Continuous Deployment (CI/CD) - SUCCESS"
     }
   }
 }
