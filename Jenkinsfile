@@ -29,7 +29,7 @@ pipeline {
       sh 'docker run --name mypycont -d -p 3000:5000 my-flask'
       mail to: "sivasanthi.svs@gmail.com",
       subject: "Notification Mail From Jenkins",
-      body: "Task: Setting up Jenkins for Continuous Integration/Continuous Deployment (CI/CD) - SUCCESS"
+      body: "GUVITask: Setting up Jenkins for Continuous Integration/Continuous Deployment (CI/CD) - SUCCESS"
     }
   }
 }
